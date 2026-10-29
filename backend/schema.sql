@@ -21,3 +21,20 @@ CREATE TABLE IF NOT EXISTS members (
    email varchar(255) NOT NULL UNIQUE,
    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS emprunts (
+   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+   book_id UUID REFERENCES books(id) ON DELETE CASCADE,
+   member_id UUID REFERENCES members(id) ON DELETE CASCADE,
+   date_of_emprunt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   date_of_return TIMESTAMP,
+   status VARCHAR(50) DEFAULT 'emprunt' -- 'emprunt', 'rendu'
+);
+
+CREATE TABLE IF NOT EXISTS users (
+   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+   username varchar(255) NOT NULL UNIQUE,
+   password varchar(255) NOT NULL,
+   role VARCHAR(50) DEFAULT 'user', -- 'user', 'admin'
+   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
