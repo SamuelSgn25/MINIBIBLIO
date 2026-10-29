@@ -1,3 +1,6 @@
+-- Connexion à la base de données PostgreSQL
+-- \c minilib
+
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 CREATE TABLE IF NOT EXISTS books (
