@@ -14,3 +14,7 @@ npm run dev
 
 
 # Réalisations :
+Voici mes réalisations :
+- Création et configuration de la base de données postgresql
+- Configuration du serveur node js
+- Connection entre le serveur node js et la base de données
