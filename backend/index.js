@@ -4,8 +4,10 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
 import dotenv from "dotenv";
+import { authenticateToken } from "./middleware/auth.js";
+import { createUser, getUserByEmail } from "./models/User.js";
 import pool from "./config/db.js";
-port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 dotenv.config();
 
