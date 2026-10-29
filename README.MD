@@ -20,6 +20,7 @@ Voici mes réalisations :
 - Connection entre le serveur node js et la base de données
 - Création et gestion des livres et des membres côté backend
 - Connexion au site pour l'administrateur côté backend
+
 Ce qui n'a pas été fait et qui aurait pû être fait avec 2h de plus:
 - Développement de l'interface complet par manque de temps
 - Connection backend et frontend
